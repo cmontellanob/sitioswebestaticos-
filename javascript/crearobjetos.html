@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>funcion constructora vinculacion externa</h1>
+    <script>
+      function auto(marca, modelo, color) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.color = color;
+        this.mostrar = MostrarAuto;
+      }
+      function MostrarAuto() {
+        document.write("marca" + this.marca + "<br>");
+        document.write("modelo" + this.modelo + "<br>");
+        document.write("color" + this.color + "<br>");
+      }
+
+      auto1 = new auto("toyota", 2024, "roojo");
+      auto1.mostrar();
+      console.log(auto);
+    </script>
+    <h1>funcion constructora prototype</h1>
+    <script>
+      function auto2(marca, modelo, color) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.color = color;
+      }
+      auto2.prototype.MostrarAuto = function () {
+        document.write("marca" + this.marca + "<br>");
+        document.write("modelo" + this.modelo + "<br>");
+        document.write("color" + this.color + "<br>");
+      };
+      auto2 = new auto2("toyota", 2024, "roojo");
+      auto2.MostrarAuto();
+      console.log(auto2);
+    </script>
+  </body>
+</html>
