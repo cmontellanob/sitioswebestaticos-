@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="filas">filas</label>
+    <input type="number" name="filas" id="filas" />
+    <label for="columnas">columnas</label>
+    <input type="number" name="columnas" id="columnas" />
+    <button>Crear</button>
+
+    <div id="mostrar" style="margin:10px"></div>
+
+    <script>
+      document.getElementById("mostrar").innerHTML = "";
+      var boton = document.querySelector("button");
+      boton.addEventListener("click", () => {
+        var filas = parseInt(document.getElementById("filas").value);
+        var columnas = parseInt(document.getElementById("columnas").value);
+        let html = `<table border="1" style="border-collapse: collapse;">`;
+
+        for (let i = 0; i <= filas; i++) {
+          html += `<tr>`;
+          for (let j = 0; j <= columnas; j++) {
+            if (i == 0 && j != 0) {
+              html += `<td>${j}</td>`;
+            } else if (j == 0 && i != 0) {
+              html += `<td>${i}</td>`;
+            } else {
+               suma=i+j; 
+              html += `<td>${suma}</td>`;
+            }
+          }
+          html += `</tr>`;
+        }
+        html += `</table>`;
+
+        document.getElementById("mostrar").innerHTML = html;
+
+        console.log(filas, columnas);
+      });
+    </script>
+  </body>
+</html>

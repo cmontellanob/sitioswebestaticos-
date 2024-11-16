@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tareas</title>
+  </head>
+  <body>
+    <h1>Lista de Tareas</h1>
+    <label>Tarea</label>
+    <input type="text" name="tarea" id="tarea" />
+    <button>Agregar</button>
+
+    <ol id="lista">
+
+    </ol>
+    <script>
+      var boton = document.querySelector("button");
+      boton.addEventListener("click", () => {
+        
+        let elemento = document.createElement("li");
+      
+        elemento.innerHTML = document.getElementById("tarea").value;
+        console.log(elemento);
+        document.querySelector("#lista").appendChild(elemento);
+        tarea.value='';
+        tarea.focus();
+      });
+    </script>
+  </body>
+</html>

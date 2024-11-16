@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Sumar 3 numeros</h1>
+    <input type="number" id="n1" /><br />
+    <input type="number" id="n2" /><br />
+    <input type="number" id="n3" /><br />
+    <button onclick="Sumar()">Sumar</button>
+
+    <div id="resultado" style="border: 1px solid black; background-color: cornsilk; width: 200px;">
+
+    </div>
+
+    <script>
+      function Sumar() {
+        var numeros = document.getElementsByTagName("input");
+        var sum = 0;
+        for (let i = 0; i < numeros.length; i++) {
+          sum += parseInt(numeros[i].value);
+        }
+        console.log(sum);
+        resultado=document.querySelector('#resultado');
+        resultado.innerHTML=sum
+      }
+    </script>
+  </body>
+</html>
