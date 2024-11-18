@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grande {
+            width: 200px;
+        }
+        .normal {
+            width: 100px;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <img class="normal"  src="images/leon.png" alt="">
+
+    <button onclick="agrandar()">agrandar</button>
+    
+
+    <script>
+        function agrandar()
+        {
+            var image=document.querySelector('img');
+
+            image.style.width='300px';
+
+
+        }
+    </script>
+</body>
+</html>
