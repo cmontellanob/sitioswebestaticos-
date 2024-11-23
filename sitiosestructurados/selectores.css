@@ -1,0 +1,13 @@
+input[type="text"] {
+    border: 1px solid #f70505;
+}
+
+a:hover {
+    color: rgb(240, 60, 6);
+    border: 1px solid yellow;
+}
+
+li:nth-child(odd){
+    background-color: #f9f9f9;
+    
+}

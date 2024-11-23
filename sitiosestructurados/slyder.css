@@ -1,0 +1,8 @@
+.slider img {
+    width: 20%;
+    display: none;
+}
+
+.slider img:first-child {
+    display: block;
+}

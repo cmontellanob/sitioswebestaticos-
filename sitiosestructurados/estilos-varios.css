@@ -1,0 +1,55 @@
+h1 {
+    text-shadow: 2px 2px 5px rgba(255,0,0,0.5);
+}
+
+div {
+    background-color: rgba(255,0,0,0,0.5);
+    width: 30%;
+    height: 50px;
+}
+button {
+    border-radius: 10px;
+    border-image:  url('images/gato.png');
+}
+.degrade {
+    border: 10px solid green;
+    background: linear-gradient(to right, #05b9b9, #feb47b);
+
+
+}
+
+a {
+    color: black;
+    transition: color 0.5s ease;
+
+    
+}
+a:hover {
+    color: red;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+div.animado {
+    animation: girar 2s linear infinite;
+}
+
+div.sombra {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+img.rotada {
+    transform: rotate(45deg);
+}
+
+
+
+
+
